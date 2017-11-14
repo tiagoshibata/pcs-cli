@@ -59,7 +59,7 @@ data:
   # Auth
   security.auth.issuer: "{OAuth2 Issuer, e.g. STS URL with Tenant ID}"
   security.auth.audience: "{OAuth2 Audience, e.g. Application ID}"
-  security.auth.required: "true"
+  security.auth.required: "false"
   security.cors.whitelist: ""
   security.application.secret: "{Application secret}"
 
