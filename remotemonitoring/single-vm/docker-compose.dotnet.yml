@@ -17,7 +17,7 @@ services:
       - /app/certs:/app/certs:ro
 
   webui:
-    image: azureiotpcs/pcs-remote-monitoring-webui:testing
+    image: tiagoshibata/pcs-remote-monitoring-webui:testing
     depends_on:
       - auth
       - iothubmanager
@@ -78,7 +78,7 @@ services:
       - PCS_APPLICATION_SECRET
 
   config:
-    image: azureiotpcs/pcs-config-dotnet:testing
+    image: tiagoshibata/pcs-config-dotnet:testing
     depends_on:
       - storageadapter
       - devicesimulation
