@@ -190,7 +190,7 @@ export class K8sManager implements IK8sManager {
         configMap.data['security.auth.issuer'] = 'https://sts.windows.net/' + this._config.AADTenantId + '/';
         configMap.data['security.application.secret'] = this.genPassword();
         configMap.data['bing.map.key'] = this._config.BingMapApiQueryKey ? this._config.BingMapApiQueryKey : '';
-        configMap.data['iothub.connstring'] = this._config.IoTHubConnectionString;
+        configMap.data['iothub.connstring'] = 'HostName=PCS2-hub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=bYMF8BlnVHF7sNkCClzzGsSCbxLPAaamiGmFXNTA8jw=';
         configMap.data['docdb.connstring']  = this._config.DocumentDBConnectionString;
         configMap.data['iothubreact.hub.name'] = this._config.EventHubName;
         configMap.data['iothubreact.hub.endpoint'] = this._config.EventHubEndpoint;

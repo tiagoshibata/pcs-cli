@@ -380,24 +380,6 @@
             }
         },
         {
-            "comments": "Azure IoT Hub",
-            "apiVersion": "[variables('iotHubApiVersion')]",
-            "type": "Microsoft.Devices/Iothubs",
-            "name": "[parameters('iotHubName')]",
-            "location": "[variables('location')]",
-            "tags": {
-                "IotSuiteType": "[parameters('solutionType')]"
-            },
-            "sku": {
-                "name": "[parameters('iotHubSku')]",
-                "tier": "[parameters('iotHubTier')]",
-                "capacity": 1
-            },
-            "properties": {
-                "location": "[variables('location')]"
-            }
-        },
-        {
             "apiVersion": "[variables('bingMapsVersion')]",
             "type": "Microsoft.BingMaps/mapApis",
             "name": "[variables('bingMapsName')]",

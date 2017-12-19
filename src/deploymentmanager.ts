@@ -134,6 +134,7 @@ export class DeploymentManager implements IDeploymentManager {
                         this._parameters.storageEndpointSuffix =  { value: storageEndpointSuffix };
                         this._parameters.vmFQDNSuffix = { value: azureVMFQDNSuffix };
                         this._parameters.aadInstance = { value: activeDirectoryEndpointUrl };
+                        this._parameters.iotHubName = { value: 'PCS2-hub' };
                     }
                 }
                 this.setupParameters(answers);
@@ -290,7 +291,7 @@ export class DeploymentManager implements IDeploymentManager {
                             if (error) {
                                 sshClient.end();
                                 reject(error);
-                                clearInterval(timer); 
+                                clearInterval(timer);
                                 return;
                             }
                             sftp.fastGet(remoteKubeConfig, localKubeConfigPath, (err: Error) => {
